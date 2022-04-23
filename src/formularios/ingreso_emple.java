@@ -267,24 +267,21 @@ this.t_iggs.setText(String.valueOf(iggs));
 
 
  double isr;
- isr = (0);
- if (a <= 30000){
+ if (a < 30000.00){
      isr = a * 5 / 100;
      this.t_isr.setText(String.valueOf(isr)); 
-      } else{
+      } 
+ else if (a >=3000.00) {
      isr = a * 7 / 100;
      this.t_isr.setText(String.valueOf(isr)); 
- 
+    
      
      double b = Double.parseDouble(this.t_prestamo.getText().trim()); 
-
-     double sueldT;
+     {
+   double sueldT;
    sueldT = a - iggs - b - isr;
    this.t_sueldototal.setText(String.valueOf(sueldT)); 
-   {
- 
-     
- }
+     }
  }
 // TODO add your handling code here:
     }//GEN-LAST:event_calcularActionPerformed
