@@ -6,15 +6,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author FAMILIA_TOBAR
- */
+
 public class ingreso_emple extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ingreso_emple
-     */
     public ingreso_emple() {
         initComponents();
         limpiar();
@@ -47,8 +41,6 @@ public class ingreso_emple extends javax.swing.JFrame {
             jButton2.setEnabled(false);
             jButton4.setEnabled(true);
     }
-       
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -264,24 +256,22 @@ this.dispose();        // TODO add your handling code here:
 double iggs = a * 10.67 / 100;
 this.t_iggs.setText(String.valueOf(iggs)); 
 
-
-
- double isr;
- if (a < 30000.00){
-     isr = a * 5 / 100;
-     this.t_isr.setText(String.valueOf(isr)); 
-      } 
- else if (a >=3000.00) {
-     isr = a * 7 / 100;
-     this.t_isr.setText(String.valueOf(isr)); 
-    
-     
+double isr;
+if (a <= 30000){
+    isr = a * 0.05;
+    t_isr.setText(String.valueOf(isr)); 
+}
+    else{
+     isr = a * 0.07;
+     t_isr.setText(String.valueOf(isr)); 
+            }   
+{   
      double b = Double.parseDouble(this.t_prestamo.getText().trim()); 
-     {
+     
    double sueldT;
    sueldT = a - iggs - b - isr;
    this.t_sueldototal.setText(String.valueOf(sueldT)); 
-     }
+     
  }
 // TODO add your handling code here:
     }//GEN-LAST:event_calcularActionPerformed
