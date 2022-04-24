@@ -263,7 +263,7 @@ if (a <= 30000){
 }
     else{
      isr = a * 0.07;
-     t_isr.setText(String.valueOf(isr)); 
+     t_isr.setText(String.format("%.2f", isr));
             }   
 {   
      double b = Double.parseDouble(this.t_prestamo.getText().trim()); 
